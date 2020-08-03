@@ -358,8 +358,8 @@ def postfilter_items(row, item_info, train_1, price, list_pop_rec, N=5):
     return final_recommendations
 
 def get_final_recomendations(X_test, test_preds_proba, val_2, train_1, item_features):
-
     """Финальный список рекомендованных товаров"""
+	
     X_test['predict_proba'] = test_preds_proba
 
     X_test.sort_values(['user_id', 'predict_proba'], ascending=False, inplace=True)
